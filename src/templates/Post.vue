@@ -33,19 +33,10 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+import SEO from '../mixins/SEO.vue';
+
 export default {
-  metaInfo() {
-    return {
-      title: this.$page.post.title,
-      meta: [
-        {
-          key: 'description',
-          name: 'description',
-          content: this.$page.post.description,
-        },
-      ],
-    };
-  },
+  mixins: [SEO],
 };
 </script>
 

@@ -2,9 +2,9 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  siteName: '有志竟成',
-  siteDescription: "Sihyun's devlog",
-  siteUrl: 'https://k4sud0n.github.io',
+  siteName: 'Gridsome bold',
+  siteDescription: 'Blog boilerplate made with Gridsome',
+  siteUrl: 'https://k4sud0n.github.io/gridsome-bold/',
 
   templates: {
     Post: '/post/:path',
@@ -35,6 +35,9 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-tailwindcss',
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
     },
   ],
 

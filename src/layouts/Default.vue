@@ -22,9 +22,12 @@
     <footer
       class="text-sm px-7 flex justify-between items-center border-t md:border border-gray-200"
     >
-      <p>ⓒ {{ currentYear }}. Sihyun Kim</p>
+      <p>ⓒ {{ currentYear }}. k4sud0n</p>
       <p class="break-all text-right">
-        Powered by <a href="https://github.com/k4sud0n/bold-gridsome" target="_blank">gridsome-bold</a>
+        Powered by
+        <a href="https://github.com/k4sud0n/bold-gridsome" target="_blank"
+          >gridsome-bold</a
+        >
       </p>
     </footer>
   </div>
@@ -33,7 +36,9 @@
 <static-query>
 query {
   metadata {
-    siteName,
+    siteName
+    siteDescription
+    siteUrl
   }
 }
 </static-query>
@@ -48,6 +53,17 @@ export default {
   data() {
     return {
       currentYear: new Date().getFullYear(),
+    };
+  },
+  metaInfo() {
+    return {
+      meta: [
+        {
+          key: 'author',
+          name: 'author',
+          content: 'k4sud0n',
+        },
+      ],
     };
   },
 };

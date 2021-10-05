@@ -1,0 +1,4 @@
+Sitemap: https://k4sud0n.github.io/gridsome-bold/sitemap.xml
+
+User-Agent: * 
+Allow: / 

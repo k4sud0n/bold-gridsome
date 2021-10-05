@@ -4,7 +4,8 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   siteName: 'Gridsome bold',
   siteDescription: 'Blog boilerplate made with Gridsome',
-  siteUrl: 'https://k4sud0n.github.io/gridsome-bold/',
+  siteUrl: 'https://k4sud0n.github.io/',
+  pathPrefix: '/gridsome-bold',
 
   templates: {
     Post: '/post/:path',

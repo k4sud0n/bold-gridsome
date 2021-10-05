@@ -1,5 +1,7 @@
 # Gridsome Bold Blog Theme
 
+[Demo](https://k4sud0n.github.io/gridsome-bold/)
+
 This is the blog boilerplate made with Gridsome.
 
 This boilerplate uses tailwindcss and tailwindcss/typography. Also, it includes post generator, markdown posts, tags, pagination, dark mode, SEO and code highlighting.

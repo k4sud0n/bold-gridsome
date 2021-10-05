@@ -1,0 +1,27 @@
+{
+  "name": "gridsome-bold",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore",
+    "post": "node post-generator"
+  },
+  "dependencies": {
+    "@gridsome/remark-prismjs": "^0.5.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-remark-shiki": "^0.6.0",
+    "vue-material-design-icons": "^4.13.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "^7",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
+}

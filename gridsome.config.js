@@ -40,6 +40,34 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-XXXXXXXXX-X'
+      }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'Post',
+        feedOptions: {
+          title: 'Your Blog Title',
+          feed_url: 'Your Blog Address/rss.xml',
+          site_url: 'Your Blog Address',
+        },
+        feedItemOptions: (node) => ({
+          title: node.title,
+          description: node.summary,
+          date: node.date,
+          url: 'Your Blog Address' + node.path,
+          author: 'Your name',
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml',
+        },
+      },
+    },
   ],
 
   transformers: {

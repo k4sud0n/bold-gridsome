@@ -34,7 +34,7 @@ cd bold-gridsome && npm install # or yarn
 
 ### 3. Config your site
 
-You can edit site name and url by editing `girdsome.config.js`.
+1. You can edit site name and url by editing `girdsome.config.js`.
 
 ```js
 ...
@@ -46,6 +46,81 @@ module.exports = {
 
   ...
 };
+```
+
+2. Config Google Analytics
+
+```js
+...
+
+module.exports = {
+
+  {
+    use: '@gridsome/plugin-google-analytics',
+    options: {
+      id: 'UA-XXXXXXXXX-X' // Add your Google Analytics code here
+    }
+  },
+
+}
+```
+
+3. Config Sitemap
+
+```js
+module.exports = {
+
+  {
+    use: 'gridsome-plugin-rss',
+    options: {
+      contentTypeName: 'Post',
+      feedOptions: {
+        title: 'Your Blog Title',
+        feed_url: 'Your Blog Address/rss.xml',
+        site_url: 'Your Blog Address',
+      },
+      feedItemOptions: (node) => ({
+        title: node.title,
+        description: node.summary,
+        date: node.date,
+        url: 'Your Blog Address' + node.path,
+        author: 'Your name',
+      }),
+      output: {
+        dir: './static',
+        name: 'rss.xml',
+      },
+    },
+  },
+
+}
+```
+
+4. Config [utteranc.es](https://utteranc.es)
+
+```vue
+<script>
+import SEO from '../mixins/SEO.vue';
+
+export default {
+  mounted() {
+    const script = window.document.createElement('script');
+    const utterance = window.document.getElementById('comments');
+    const attrs = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'k4sud0n/gridsome-bold', // Your repo name
+      'issue-term': `${this.$page.post.title} (${this.$page.post.date})`,
+      theme: 'github-light', // utteranc.es theme
+      crossorigin: 'anonymous',
+      async: true,
+    };
+    Object.entries(attrs).forEach(([key, value]) => {
+      script.setAttribute(key, value);
+    });
+    utterance.appendChild(script);
+  },
+};
+</script>
 ```
 
 ### 4. Generate post using post-generator

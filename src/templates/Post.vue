@@ -37,6 +37,22 @@ import SEO from '../mixins/SEO.vue';
 
 export default {
   mixins: [SEO],
+  mounted() {
+    const script = window.document.createElement('script');
+    const utterance = window.document.getElementById('comments');
+    const attrs = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'k4sud0n/gridsome-bold',
+      'issue-term': `${this.$page.post.title} (${this.$page.post.date})`,
+      theme: 'github-light',
+      crossorigin: 'anonymous',
+      async: true,
+    };
+    Object.entries(attrs).forEach(([key, value]) => {
+      script.setAttribute(key, value);
+    });
+    utterance.appendChild(script);
+  },
 };
 </script>
 

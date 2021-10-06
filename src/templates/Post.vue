@@ -15,6 +15,7 @@
       </div>
     </div>
     <article class="px-7 md:px-14 pb-7 md:pb-14" v-html="$page.post.content" />
+    <div id="comments" class="p-7 border-t border-gray-200"></div>
   </Layout>
 </template>
 

@@ -2,11 +2,20 @@
 
 [Demo](https://k4sud0n.github.io/gridsome-bold/)
 
-This is the blog boilerplate made with Gridsome.
+## Features
 
-This boilerplate uses tailwindcss and tailwindcss/typography. Also, it includes post generator, markdown posts, tags, pagination, dark mode, SEO and code highlighting.
+- Designed with tailwindcss, tailwindcss/typography
+- Generate post easily using `post-generator` tool
+- Simple layout
+- Tags
+- Pagination
+- Dark mode
+- SEO friendly
+- Sitemap
+- Syntax highlighter with [Shiki](https://shiki.matsu.io)
+- Comments with [utteranc.es](https://utteranc.es)
 
-You can simply add [utteranc.es](https://utteranc.es) for comment feature.
+## Installation
 
 ### 1. Install Gridsome CLI tool if you don't have
 
